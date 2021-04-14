@@ -18,15 +18,17 @@ public class Task3 extends HttpServlet {
 //        int n=Integer.parseInt(request.getParameter("numberIn"));
         int start=0;
         int finish=100;
-            if(request.getParameter("Border")!=null&&request.getParameter("less")!=null&&request.getParameter("less").equals("on"))
+        String radioChoice=request.getParameter("radio");
+        System.out.println(radioChoice);
+            if(request.getParameter("Border")!=null&&radioChoice.equals("lessId"))
             {
                 start=Integer.parseInt(request.getParameter("start"));
                 finish=Integer.parseInt(request.getParameter("Border"));
 
-            }else if(request.getParameter("Border")!=null&&request.getParameter("more")!=null&&request.getParameter("more").equals("on")){
+            }else if(request.getParameter("Border")!=null&&radioChoice.equals("moreId")){
                     start=Integer.parseInt(request.getParameter("Border"));
                     finish=Integer.parseInt(request.getParameter("finish"));
-            } else if(request.getParameter("Border")!=null&&request.getParameter("equal")!=null&&request.getParameter("equal").equals("on")){
+            } else if(request.getParameter("Border")!=null&&radioChoice.equals("equalId")){
                 RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");
                 rd.forward(request,response);
             }

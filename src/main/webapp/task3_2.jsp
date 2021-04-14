@@ -20,11 +20,11 @@
     <input type="hidden" name="finish" id="finishId" value="<%=finish%>" readonly>
 
 
-    <label><input type="radio" name="more" id="moreId"> Число больше <%=s%></label>
+    <label><input type="radio" name="radio" value="moreId"> Число больше <%=s%></label>
     <br>
-    <label><input type="radio" name="less" id="lessId">Число меньше <%=s%></label>
+    <label><input type="radio" name="radio" value="lessId">Число меньше <%=s%></label>
     <br>
-    <label><input type="radio" name="equal" id="equalId">Число равно <%=s%></label>
+    <label><input type="radio" name="radio" value="equalId">Число равно <%=s%></label>
     <br>
     <input type="submit" value="Next Guess">
 </form>
